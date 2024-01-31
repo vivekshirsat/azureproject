@@ -1,0 +1,30 @@
+{
+	"name": "Json_sql",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADLS_SInk",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "Table_Source_SQL.json",
+				"fileSystem": "lookupfiles"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"tablename_source": {
+					"type": "string"
+				},
+				"filename_sink": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

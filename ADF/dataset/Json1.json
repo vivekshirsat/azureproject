@@ -1,0 +1,42 @@
+{
+	"name": "Json1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADLS_SInk",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "Table_Source_Datalake.json",
+				"fileSystem": "lookupfiles"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"File_name_source": {
+					"type": "string"
+				},
+				"container_source": {
+					"type": "string"
+				},
+				"directory_source": {
+					"type": "string"
+				},
+				"File_name_sink": {
+					"type": "string"
+				},
+				"container_sink": {
+					"type": "string"
+				},
+				"directory_sink": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
